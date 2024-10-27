@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoluntariaR Mossoró</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-logo">VoluntariaR</a>
+      <div class="navbar-links">
+        <a href="#why-volunteer">Por Que Voluntariar</a>
+        <a href="#actions">Ações</a>
+        <a href="#about-us">Quem Somos</a>
+        <a href="#contact">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="banner">
+    <div class="banner-content">
+      <h1>Transforme Vidas Através do Voluntariado</h1>
+      <p>Junte-se a nós e faça a diferença nas comunidades de Mossoró</p>
+    </div>
+  </header>
+
+  <section id="why-volunteer" class="section">
+    <h2 class="section-title">Por Que Ser Voluntário?</h2>
+    <div class="why-volunteer">
+      <div class="why-volunteer-item">
+        <i class="fas fa-hands-helping"></i>
+        <h3>Impacto Positivo</h3>
+        <p>Faça a diferença na vida das pessoas e na sua comunidade.</p>
+      </div>
+      <div class="why-volunteer-item">
+        <i class="fas fa-heart"></i>
+        <h3>Crescimento Pessoal</h3>
+        <p>Desenvolva novas habilidades e expanda seus horizontes.</p>
+      </div>
+      <div class="why-volunteer-item">
+        <i class="fas fa-users"></i>
+        <h3>Conexões Significativas</h3>
+        <p>Conheça pessoas incríveis e construa relacionamentos duradouros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="actions" class="section">
+    <h2 class="section-title">Ações Voluntárias</h2>
+    <div id="action-cards"></div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p id="modal-datetime"></p>
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <section id="about-us" class="section">
+    <h2 class="section-title">Quem Somos</h2>
+    <div class="about-us">
+      <img src="./images/nos.png" alt="Equipe VoluntariaR" class="about-us-image">
+      <div class="about-us-content">
+        <p>A VoluntariaR é uma organização sem fins lucrativos dedicada a conectar pessoas apaixonadas por fazer a diferença com oportunidades de voluntariado significativas em Mossoró.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Entre em Contato</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar Mensagem</button>
+    </form>
+    <div class="social-links">
+      <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Leonardo Monteiro. Todos os direitos reservados.</p>
+  </footer>
+
+  <script type="text/babel" src="script.js"></script> <!-- Link JavaScript -->
+</body>
+</html>
